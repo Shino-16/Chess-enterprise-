@@ -1,0 +1,8 @@
+if turn_step == 2:  # Assuming it's the AI's turn
+    ai_move = ai_decide_move(white_pieces, white_locations, black_pieces, black_locations)
+    # Execute the AI move
+    black_locations[ai_move[0]] = ai_move[1]  # Move the piece
+    # Update the game state
+    black_options = check_options(black_pieces, black_locations, 'black')
+    white_options = check_options(white_pieces, white_locations, 'white')
+    turn_step = 0  # Switch turn back to player

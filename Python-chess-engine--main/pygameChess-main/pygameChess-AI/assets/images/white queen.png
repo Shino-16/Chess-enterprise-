@@ -1,0 +1,16 @@
+import random
+
+def ai_move(white_pieces, white_locations, black_pieces, black_locations):
+    # Assuming it's black's turn
+    valid_moves = check_options(black_pieces, black_locations, 'black')
+    all_moves = []
+    
+    for i in range(len(black_pieces)):
+        for move in valid_moves[i]:
+            all_moves.append((i, move))  # (piece index, target position)
+    
+    if all_moves:
+        piece_index, target_position = random.choice(all_moves)
+        # Execute the move (update locations, handle captures, etc.)
+        black_locations[piece_index] = target_position
+        # Handle captures and other game state updates here

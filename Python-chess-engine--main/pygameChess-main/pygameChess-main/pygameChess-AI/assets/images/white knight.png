@@ -1,0 +1,6 @@
+if turn_step == 2:  # Assuming it's the AI's turn
+    best_move = ai_choose_move(white_pieces, white_locations, black_pieces, black_locations)
+    # Execute the move
+    if best_move:
+        # Update the board state with the AI's move
+        # Update turn_step and other necessary variables

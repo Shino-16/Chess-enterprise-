@@ -1,0 +1,11 @@
+def ai_move():
+    best_move = None
+    best_score = -float('inf')
+    
+    for move in generate_all_moves(black_pieces, black_locations):
+        score = evaluate_board_after_move(move)
+        if score > best_score:
+            best_score = score
+            best_move = move
+            
+    return best_move
